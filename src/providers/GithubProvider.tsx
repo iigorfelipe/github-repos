@@ -1,5 +1,4 @@
-import { ReactNode, useState } from 'react';
-import PropTypes from 'prop-types';
+import { ReactNode, useState, useMemo } from 'react';
 import GithubContext from './GithubContext';
 import { UserInfos } from '../types/user';
 
@@ -23,22 +22,20 @@ const GithubProvider = ({ children }: Props) => {
     stars: [],
   });
 
+  const memorizedValues = useMemo(() => {
+    return {
+      searchInputValue,
+      setSearchInputValue,
+      userInformation,
+      setUserInformation,
+    };
+  }, [searchInputValue, userInformation]);
+
   return (
-    <GithubContext.Provider
-      value={{
-        searchInputValue,
-        setSearchInputValue,
-        userInformation,
-        setUserInformation,
-      }}
-    >
+    <GithubContext.Provider value={memorizedValues}>
       {children}
     </GithubContext.Provider>
   );
-};
-
-GithubProvider.propTypes = {
-  children: PropTypes.node.isRequired,
 };
 
 export default GithubProvider;
