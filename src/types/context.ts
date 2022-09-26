@@ -1,4 +1,4 @@
-import { UserInfos } from "./user";
+import { UserInfos } from './user';
 
 export type UserContextType = {
   searchInputValue: string;

@@ -1,7 +1,7 @@
 export type UserInfos = {
-  infos: Infos,
-  repos: object[],
-  stars: object[],
+  infos: Infos;
+  repos: object[];
+  stars: object[];
 };
 
 export type Infos = {

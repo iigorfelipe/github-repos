@@ -1,6 +1,6 @@
 import { ReactNode, useState } from 'react';
-import GithubContext from './GithubContext';
 import PropTypes from 'prop-types';
+import GithubContext from './GithubContext';
 import { UserInfos } from '../types/user';
 
 type Props = {
@@ -25,14 +25,12 @@ const GithubProvider = ({ children }: Props) => {
 
   return (
     <GithubContext.Provider
-      value={
-        {
-          searchInputValue,
-          setSearchInputValue,
-          userInformation,
-          setUserInformation,
-        }
-      }
+      value={{
+        searchInputValue,
+        setSearchInputValue,
+        userInformation,
+        setUserInformation,
+      }}
     >
       {children}
     </GithubContext.Provider>
