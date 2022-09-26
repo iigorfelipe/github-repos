@@ -1,23 +1,19 @@
 import { createContext } from 'react';
-
-type UserContextType = {
-  searchInputValue: string;
-  setSearchInputValue: (newState: string) => void;
-  userInformation: UserInfos;
-  setUserInformation: (newState: UserInfos) => void;
-};
-
-export type UserInfos = {
-  infos: string,
-  repos: number[],
-  stars: number[],
-};
+import { UserContextType } from '../types/context';
 
 const initialValue = {
   searchInputValue: '',
   setSearchInputValue: () => {},
   userInformation: {
-    infos: '',
+    infos: {
+      avatar_url: '',
+      name: '',
+      email: '',
+      login: '',
+      twitter_username: '',
+      followers: 0,
+      following: 0,
+    },
     repos: [],
     stars: [],
   },

@@ -1,6 +1,7 @@
 import { ReactNode, useState } from 'react';
-import GithubContext, { UserInfos } from './GithubContext';
+import GithubContext from './GithubContext';
 import PropTypes from 'prop-types';
+import { UserInfos } from '../types/user';
 
 type Props = {
   children: ReactNode;
@@ -9,7 +10,15 @@ type Props = {
 const GithubProvider = ({ children }: Props) => {
   const [searchInputValue, setSearchInputValue] = useState('');
   const [userInformation, setUserInformation] = useState<UserInfos>({
-    infos: '',
+    infos: {
+      avatar_url: '',
+      name: '',
+      email: '',
+      login: '',
+      twitter_username: '',
+      followers: 0,
+      following: 0,
+    },
     repos: [],
     stars: [],
   });
