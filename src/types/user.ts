@@ -1,15 +1,34 @@
 export type UserInfos = {
   infos: Infos;
-  repos: object[];
-  stars: object[];
+  repos: Repo[];
+  stars: Repo[];
 };
 
 export type Infos = {
-  avatar_url: string;
-  name: string;
-  email: string;
-  login: string;
-  twitter_username: string;
-  followers: number;
-  following: number;
+  id?: number;
+  avatar_url?: string;
+  name?: string;
+  login?: string;
+  bio?: string;
+  followers?: number;
+  following?: number;
+  company?: string;
+  location?: string;
+  blog?: string;
+  email?: string;
+  twitter_username?: string;
+  created_at?: string;
+};
+
+export type Repo = {
+  id?: number;
+  name?: string;
+  description?: string;
+  created_at?: string;
+  pushed_at?: string;
+  updated_at?: string;
+  forks?: number;
+  language?: string;
+  license?: string;
+  visibility?: string;
 };
