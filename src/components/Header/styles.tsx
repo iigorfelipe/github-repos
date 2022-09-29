@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   height: 60px;
   color: #fff;
-  background: #24292f;
+  background: #161b22;
   display: flex;
   justify-content: space-between;
   align-items: center;
