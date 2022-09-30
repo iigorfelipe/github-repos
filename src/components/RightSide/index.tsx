@@ -7,7 +7,7 @@ import Filters from '../Filters';
 import * as C from './styles';
 
 const RightSide = () => {
-  const [display, setDisplay] = useState<Display>('list');
+  const [display, setDisplay] = useState<Display>('grid');
 
   return (
     <C.Container>
