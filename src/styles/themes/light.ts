@@ -9,6 +9,7 @@ const Ligth = {
   colors: {
     primary: '#24292f',
     secundary: '#57606a',
+    tertiary: 'rgba(139, 148, 158, 0.288)',
     link: '#0969da',
   },
 };
