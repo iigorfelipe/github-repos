@@ -13,7 +13,7 @@ const Home = () => {
 
   return !infos.login ? (
     <C.Message>
-      Veja todos os repositórios publicos de qualquer usuário do Github atráves
+      Veja todos os repositórios públicos de qualquer usuário do Github através
       de uma simples pesquisa.
     </C.Message>
   ) : (
