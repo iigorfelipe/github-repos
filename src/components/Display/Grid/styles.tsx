@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
-export const GridOl = styled.ol`
+export const Ol = styled.ol`
   width: 912px;
-  /* height: 264px; */
   margin: 0px -8px 8px;
   font-size: 14px;
   list-style: none;
@@ -11,39 +10,59 @@ export const GridOl = styled.ol`
   flex-wrap: wrap;
 `;
 
-export const GridLi = styled.li`
+export const Li = styled.li`
   width: 456px;
   height: 125px;
   margin: 0px 0px 16px;
   padding: 0px 8px;
 `;
 
-export const GridDiv = styled.div`
+export const Div = styled.div`
   width: 440px;
   height: 125px;
   padding: 16px;
-  border: 1px solid gray;
+  border: 1px solid ${(props) => props.theme.colors.tertiary};
   border-radius: 5px;
 `;
 
-export const GridDiv2 = styled.div`
-  width: 406px;
-  height: 91px;
+export const Div2 = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 `;
 
-export const GridTitle = styled.p`
+export const IconRepositories = styled.img`
+  padding-right: 6px;
+`;
+
+export const Title = styled.span`
   font-size: 14px;
   font-weight: 600;
   color: ${(props) => props.theme.colors.link};
+  margin-right: 0px;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
 `;
 
-export const GridDescrition = styled.p`
+export const Visibility = styled.span`
+  color: ${(props) => props.theme.colors.secundary};
+  border: 1px solid ${(props) => props.theme.colors.tertiary};
+  font-size: 11px;
+  margin-left: 8px;
+  padding: 2px 6px;
+  border-radius: 2em;
+  text-transform: capitalize;
+`;
+export const Descrition = styled.span`
   height: 36px;
   margin: 8px 0px 0px;
   font-size: 12px;
+  color: ${(props) => props.theme.colors.secundary};
 `;
 
-export const GridStars = styled.p`
+export const Details = styled.div`
   width: 406px;
   height: 18px;
   margin: 8px 0px 0px;
@@ -53,6 +72,23 @@ export const GridStars = styled.p`
   justify-content: flex-start;
 `;
 
+export const Detail = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 15px;
+`;
+
+export const Language = styled.span`
+  width: 12px;
+  height: 12px;
+  border: 1px solid gray;
+  border-radius: 50%;
+  background-color: ${(props) => props.languageColor};
+`;
+
+export const Image = styled.img``;
+
 export const Span = styled.span`
-  margin: 0px 0px 0px 16px;
+  margin-left: 5px;
 `;
