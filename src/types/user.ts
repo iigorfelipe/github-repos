@@ -27,6 +27,7 @@ export type Repo = {
   created_at?: string;
   pushed_at?: string;
   stargazers_count: number;
+  topics?: string[];
   updated_at?: string;
   forks?: number;
   language?: string;
