@@ -52,6 +52,7 @@ const SearchInput = () => {
 
   return (
     <C.Form onSubmit={handleGettingUser}>
+
       <C.Input
         type="text"
         id="username"
@@ -60,9 +61,16 @@ const SearchInput = () => {
         onChange={({ target: { value } }) => setSearchInputValue(value)}
       />
 
-      {loading && (
-        <Loading type="bubbles" color="#fff" height={20} width={40} />
-      )}
+      {
+        loading &&
+          <Loading
+            type="bubbles"
+            color="#fff"
+            height={20}
+            width={40}
+          />
+      }
+
     </C.Form>
   );
 };
