@@ -26,6 +26,11 @@ export const Select = styled.select`
   color: ${(props) => props.theme.colors.primary};
   border-radius: 5px;
   margin: 0px 2px;
+  &:hover {
+    cursor: pointer;
+    border: 1px solid ${(props) => props.theme.colors.secundary};
+    background: ${(props) => props.theme.colors.tertiary};
+  }
 `;
 
 export const Option = styled.option``;
