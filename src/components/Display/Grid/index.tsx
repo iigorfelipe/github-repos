@@ -68,7 +68,7 @@ const Grid = () => {
                   }
 
                   {
-                    repo.forks && 
+                    repo.forks > 0 && 
                       <C.Detail>
 
                         <C.Image src={`./repo-forked-16-${title}.svg`} />
