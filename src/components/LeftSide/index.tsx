@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import GithubContext from '../../providers/GithubContext';
@@ -9,8 +8,6 @@ const LeftSide = () => {
   const {
     userInformation: { infos },
   } = useContext(GithubContext);
-  
-  console.log(infos);
 
   return (
     <C.LeftSide>
