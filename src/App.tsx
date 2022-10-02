@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 import { Dark, Ligth, GlobalStyle } from './styles';
 
