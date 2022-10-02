@@ -1,11 +1,13 @@
-const getDayAndMouth = (dayAndMouth: string) => {
-  const date = new Date(`${dayAndMouth}`);
+const getDayAndMouth = (dateInString: string) => {
+  const date = new Date(`${dateInString}`);
 
   const day = date.toLocaleString('en-US', { day: 'numeric' });
 
   const month = date.toLocaleString('en-US', { month: 'short' });
 
-  return `${day} ${month}`;
+  const year = date.toLocaleString('en-US', { year: 'numeric' });
+
+  return `${day} ${month} ${year}`;
 };
 
 export default getDayAndMouth;
