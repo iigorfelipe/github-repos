@@ -10,12 +10,12 @@ import * as C from './styles';
 const Grid = () => {
   const { title } = useContext(ThemeContext);
 
-  const { userInformation: { repos } } = useContext(GithubContext);
+  const { reposFiltered } = useContext(GithubContext);
 
   return (
     <C.Ol>
       {
-        repos.map((repo) => (
+        reposFiltered.map((repo) => (
           <C.Li key={repo.id}>
 
             <C.Div>
