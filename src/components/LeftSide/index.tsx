@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import GithubContext from '../../providers/GithubContext';
@@ -5,10 +6,11 @@ import * as C from './styles';
 
 const LeftSide = () => {
   const { title } = useContext(ThemeContext);
-
   const {
     userInformation: { infos },
   } = useContext(GithubContext);
+  
+  console.log(infos);
 
   return (
     <C.LeftSide>
@@ -56,7 +58,7 @@ const LeftSide = () => {
           infos.location &&
             <C.Div2>
 
-              <C.Image src={`./link-${title}.svg`} />
+              <C.Image src={`./map-pin-${title}.svg`} />
 
               <C.Location>{infos.location}</C.Location>
 
@@ -65,9 +67,9 @@ const LeftSide = () => {
 
         {
           infos.blog &&
-            <C.Div2>
+          <C.Div2>
 
-              <C.Image src={`./map-pin-${title}.svg`} />
+              <C.Image src={`./link-${title}.svg`} />
 
               <C.Blog>{infos.blog}</C.Blog>
 
@@ -81,6 +83,17 @@ const LeftSide = () => {
               <C.Image src={`./twitter-fill-${title}.svg`} />
 
               <C.Twitter>{infos.twitter_username}</C.Twitter>
+
+            </C.Div2>
+        }
+
+        {
+          infos.email && 
+            <C.Div2>
+
+              <C.Image src={`./email-${title}.svg`} />
+
+              <C.Email>{infos.email}</C.Email>
 
             </C.Div2>
         }

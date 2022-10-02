@@ -122,16 +122,13 @@ export const Blog = styled.a`
   cursor: pointer;
   &:hover {
     text-decoration: underline;
+    color: ${(props) => props.theme.colors.link};
   }
 `;
 
-export const Twitter = styled.a`
-  line-height: 24px;
-  cursor: pointer;
-  &:hover {
-    text-decoration: underline;
-  }
-`;
+export const Twitter = styled(Blog)``;
+
+export const Email = styled(Blog)``;
 
 export const Line = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.tertiary};
