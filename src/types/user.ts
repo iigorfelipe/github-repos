@@ -30,6 +30,8 @@ export type Repo = {
   updated_at?: string;
   forks?: number;
   language?: string;
-  license?: string;
+  license?: {
+    name: string;
+  };
   visibility?: string;
 };
