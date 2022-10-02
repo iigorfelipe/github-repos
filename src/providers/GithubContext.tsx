@@ -4,6 +4,7 @@ import { UserContextType } from '../types/context';
 const initialValue = {
   searchInputValue: '',
   setSearchInputValue: () => {},
+
   userInformation: {
     infos: {
       avatar_url: '',
@@ -18,6 +19,7 @@ const initialValue = {
     stars: [],
   },
   setUserInformation: () => {},
+
   reposFiltered: [],
   setReposFiltered: () => {},
 };
