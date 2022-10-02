@@ -1,6 +1,6 @@
 import { ReactNode, useState, useMemo } from 'react';
 import GithubContext from './GithubContext';
-import { UserInfos } from '../types/user';
+import { Repo, UserInfos } from '../types/user';
 
 type Props = {
   children: ReactNode;
@@ -22,14 +22,18 @@ const GithubProvider = ({ children }: Props) => {
     stars: [],
   });
 
+  const [reposFiltered, setReposFiltered] = useState<Repo[]>([]);
+
   const memorizedValues = useMemo(() => {
     return {
       searchInputValue,
       setSearchInputValue,
       userInformation,
       setUserInformation,
+      reposFiltered,
+      setReposFiltered,
     };
-  }, [searchInputValue, userInformation]);
+  }, [searchInputValue, userInformation, reposFiltered]);
 
   return (
     <GithubContext.Provider value={memorizedValues}>

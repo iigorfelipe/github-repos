@@ -18,6 +18,8 @@ const initialValue = {
     stars: [],
   },
   setUserInformation: () => {},
+  reposFiltered: [],
+  setReposFiltered: () => {},
 };
 
 const GithubContext = createContext<UserContextType>(initialValue);
