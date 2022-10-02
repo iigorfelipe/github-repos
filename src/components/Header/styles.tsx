@@ -10,4 +10,6 @@ export const Container = styled.div`
   padding: 0 30px;
 `;
 
-export default Container;
+export const GituhubLogo = styled.img`
+  cursor: pointer;
+`;
