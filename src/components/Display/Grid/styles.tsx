@@ -70,6 +70,7 @@ export const Details = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  color: ${(props) => props.theme.colors.secundary};
 `;
 
 export const Detail = styled.div`
