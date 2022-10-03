@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 import getDayAndMouth from '../../../helpers/convertDate';
@@ -72,24 +71,24 @@ const List = () => {
 
                   {
                     repo.stargazers_count > 0 &&
-                      <C.Detail>
+                      <C.DetailStar>
 
                         <C.Image src={`./star-${title}.svg`} />
 
                         <C.Span>{repo.stargazers_count}</C.Span>
 
-                      </C.Detail>
+                      </C.DetailStar>
                   }
 
                   {
                     repo.forks >= 1 &&
-                      <C.Detail>
+                      <C.DetailFork>
 
                         <C.Image src={`./repo-forked-16-${title}.svg`} />
 
                         <C.Span>{repo.forks}</C.Span>
 
-                      </C.Detail>
+                      </C.DetailFork>
                   }
 
                   {
