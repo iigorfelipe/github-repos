@@ -67,14 +67,16 @@ const Grid = () => {
                   }
 
                   {
-                    repo.forks > 0 && 
-                      <C.DetailFork>
+                    repo.forks
+                      ? repo.forks >= 1 &&
+                        <C.DetailFork>
 
-                        <C.Image src={`./repo-forked-16-${title}.svg`} />
+                          <C.Image src={`./repo-forked-16-${title}.svg`} />
 
-                        <C.Span>{repo.forks}</C.Span>
+                          <C.Span>{repo.forks}</C.Span>
 
-                      </C.DetailFork>
+                        </C.DetailFork>
+                      : ''
                   }
 
                 </C.Details>
