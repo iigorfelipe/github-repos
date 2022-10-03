@@ -1,6 +1,6 @@
 <div align="center">
 
-[Technologies](#technologies) | [Development Tools](#development-tools) | [Install](#install) | [Local Usage](#local-usage) | [Images](#images) | [References](#references) | [Author](#author)
+[Technologies](#technologies) | [Development Tools](#development-tools) | [Install](#install) | [Local Usage](#local-usage) | [Images](#images) | [Author](#author) | [References](#references)
 
 </div>
 
@@ -51,13 +51,9 @@ Dark mode
   <img src="https://user-images.githubusercontent.com/87145566/193666189-6a967e1d-e2f0-48c3-a636-c907ff713b53.png" />
 </div>
 
-</br>
-
 ## Author
 
 - [Igor Felipe - Linkedin](https://www.linkedin.com/in/iigor-felipe/)
-
-</br>
 
 ## References
 
