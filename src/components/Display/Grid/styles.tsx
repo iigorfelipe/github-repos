@@ -80,6 +80,20 @@ export const Detail = styled.div`
   margin-right: 15px;
 `;
 
+export const DetailFork = styled(Detail)`
+  cursor: pointer;
+  &:hover {
+    color: ${(props) => props.theme.colors.link};
+  }
+`;
+
+export const DetailStar = styled(DetailFork)`
+  cursor: pointer;
+  &:hover {
+    color: ${(props) => props.theme.colors.link};
+  }
+`;
+
 export const Language = styled.span`
   width: 12px;
   height: 12px;
