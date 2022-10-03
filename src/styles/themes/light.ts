@@ -4,6 +4,8 @@ const Ligth = {
   background: {
     primary: '#fff',
     secundary: '#f6f8fa',
+    link: 'rgb(56 139 253 / 15%)',
+    linkHover: '#218bff',
   },
 
   colors: {

@@ -5,6 +5,8 @@ const Dark = {
     primary: '#0d1117',
     secundary: '#151a22',
     tertiary: '#21262D',
+    link: 'rgb(56 139 253 / 15%)',
+    linkHover: '#1158c7',
   },
 
   colors: {
