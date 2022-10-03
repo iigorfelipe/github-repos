@@ -55,6 +55,7 @@ export const Visibility = styled.span`
   border-radius: 2em;
   text-transform: capitalize;
 `;
+
 export const Descrition = styled.span`
   height: 36px;
   margin: 8px 0px 0px;
