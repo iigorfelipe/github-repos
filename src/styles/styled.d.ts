@@ -8,6 +8,8 @@ declare module 'styled-components' {
       primary: string;
       secundary: string;
       tertiary?: string;
+      link: string;
+      linkHover: string;
     };
 
     colors: {
