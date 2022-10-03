@@ -1,15 +1,41 @@
 import styled from 'styled-components';
 
-export const Div = styled.div`
+export const Container = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding-bottom: 10px;
 `;
 
+export const Length = styled.div`
+  display: flex;
+  align-items: center;
+  border: 1px solid ${(props) => props.theme.background.secundary};
+  border-radius: 2em;
+  margin-right: 10px;
+  padding: 5px;
+`;
+
+export const Div = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const Image = styled.img`
+  padding-right: 2px;
+`;
+
+export const Dot = styled.span`
+  padding: 0px 5px;
+  font-size: xx-small;
+  color: ${(props) => props.theme.colors.secundary};
+`;
+
+export const Span = styled.span``;
+
 export const Input = styled.input`
   height: 32px;
-  width: 506px;
+  width: 490px;
   padding: 5px 12px;
   margin-right: 15px;
   border-radius: 5px;
