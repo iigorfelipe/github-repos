@@ -66,3 +66,13 @@ Dark mode
 - [Nuka Carousel - Docs](https://www.npmjs.com/package/nuka-carousel)
 
 - [Theme - Video](https://www.youtube.com/watch?v=ngVU74daJ8Y)
+
+- API Github:
+
+  - [Users - Api](https://api.github.com/users/username)
+
+  - [Repositories - Api](https://api.github.com/users/username/repos)
+
+  - [Stars - Api](https://api.github.com/users/username/starred)
+
+__obs: change "username" to the user you want to fetch from Github API
