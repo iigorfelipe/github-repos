@@ -11,7 +11,8 @@ const RightSide = () => {
 
   return (
     <C.Container>
-      <Checkbox setDisplay={setDisplay} />
+
+      <Checkbox display={display} setDisplay={setDisplay} />
 
       <Filters />
 

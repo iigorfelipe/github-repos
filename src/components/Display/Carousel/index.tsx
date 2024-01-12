@@ -72,7 +72,7 @@ const CarouselDisplay = () => {
                       {          
                         repo.topics?.map((topic) => (
                           <C.Topics
-                            key={repo.id}
+                            key={topic}
                             onClick={() => window.open(`https://github.com/topics/${topic}`)}
                           >
                             {topic}
