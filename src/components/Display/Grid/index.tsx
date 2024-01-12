@@ -6,6 +6,8 @@ import GithubContext from '../../../providers/GithubContext';
 
 import * as C from './styles';
 
+const languageColors: Record<string, string> = languages;
+
 const Grid = () => {
   const { title } = useContext(ThemeContext);
 
@@ -52,7 +54,7 @@ const Grid = () => {
                     repo.language &&
                       <C.Detail>
 
-                        <C.Language languageColor={languages[repo.language]} />
+                        <C.Language languageColor={languageColors[repo.language]} />
 
                         <C.Span>{repo.language}</C.Span>
 

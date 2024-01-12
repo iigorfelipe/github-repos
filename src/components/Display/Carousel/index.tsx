@@ -9,6 +9,8 @@ import getDayAndMouth from '../../../helpers/convertDate';
 
 import * as C from './styles';
 
+const languageColors: Record<string, string> = languages;
+
 const CarouselDisplay = () => {
   const { title } = useContext(ThemeContext);
 
@@ -53,7 +55,7 @@ const CarouselDisplay = () => {
               repo.language &&
                 <C.DivLanguage>
 
-                  <C.Language languageColor={languages[repo.language]} />
+                  <C.Language languageColor={languageColors[repo.language]} />
 
                   <C.Span>{repo.language}</C.Span>
 

@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+type LanguageProps = {
+  languageColor: string;
+};
+
 export const Ol = styled.ol`
   list-style: none;
   margin-top: 8px;
@@ -103,7 +107,7 @@ export const DetailStar = styled.div`
   margin-right: 10px;
 `;
 
-export const Language = styled.span`
+export const Language = styled.span<LanguageProps>`
   width: 12px;
   height: 12px;
   border: 1px solid gray;

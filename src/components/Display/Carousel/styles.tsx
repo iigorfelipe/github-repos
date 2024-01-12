@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+type LanguageProps = {
+  languageColor: string;
+};
+
 export const Container = styled.div`
   margin-top: 25px;
   padding: 10px;
@@ -48,7 +52,7 @@ export const DivLanguage = styled(Div)`
   padding: 15px 0px;
 `;
 
-export const Language = styled.span`
+export const Language = styled.span<LanguageProps>`
   width: 12px;
   height: 12px;
   border: 1px solid gray;
