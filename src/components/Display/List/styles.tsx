@@ -11,7 +11,6 @@ export const Ol = styled.ol`
 
 export const Li = styled.li`
   width: 896px;
-  max-height: 200px;
   padding: 24px 0px;
   border-top: 1px solid ${(props) => props.theme.colors.tertiary};
 `;
@@ -59,11 +58,12 @@ export const DivTopics = styled(Div2)`
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 `;
 
 export const Topics = styled.a`
   font-size: 12px;
-  margin-right: 2px;
+  margin: 2px;
   padding: 4px 8px;
   border-radius: 2em;
   border: 1px solid transparent;
@@ -77,7 +77,6 @@ export const Topics = styled.a`
 `;
 
 export const Details = styled.div`
-  width: 406px;
   height: 18px;
   font-size: 12px;
   display: flex;

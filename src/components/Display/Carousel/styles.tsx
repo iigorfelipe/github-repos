@@ -46,6 +46,7 @@ export const Visibility = styled.span`
 export const Descrition = styled.span`
   font-size: 14px;
   color: ${(props) => props.theme.colors.secundary};
+  margin-bottom: 10px;
 `;
 
 export const DivLanguage = styled(Div)`

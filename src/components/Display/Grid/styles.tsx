@@ -23,7 +23,7 @@ export const Li = styled.li`
 
 export const Div = styled.div`
   width: 440px;
-  height: 125px;
+  height: 100%;
   padding: 16px;
   border: 1px solid ${(props) => props.theme.colors.tertiary};
   border-radius: 5px;
@@ -65,6 +65,9 @@ export const Descrition = styled.span`
   margin: 8px 0px 0px;
   font-size: 12px;
   color: ${(props) => props.theme.colors.secundary};
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 
 export const Details = styled.div`
