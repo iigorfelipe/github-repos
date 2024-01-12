@@ -8,7 +8,19 @@
 
 <p align="center">
   <i>
-    Search for a github user and see all your public repositories in a list, grid or carousel.
+    Search for a GitHub user and explore their public repositories in a list, grid, or carousel.
+  </i>
+</p>
+
+<p align="center">
+  <i>
+    With both light and dark modes, catering to your visual preferences.
+  </i>
+</p>
+
+<p align="center">
+  <i>
+    The project provides quick access to various external resources: full profile, followers, website, twitter, repositories, topics and forks
   </i>
 </p>
 
@@ -46,9 +58,9 @@ npm run dev
 
 <div align="center">
 Dark mode
-  <img src="https://user-images.githubusercontent.com/87145566/193666126-d7065774-7244-4471-a4a7-c89f8165a309.png" />
+  <img src="https://github.com/iigorfelipe/github-repos/assets/87145566/92ea8580-df19-40a9-8cef-4f39f16da6a9" />
   Light mode
-  <img src="https://user-images.githubusercontent.com/87145566/193666189-6a967e1d-e2f0-48c3-a636-c907ff713b53.png" />
+  <img src="https://github.com/iigorfelipe/github-repos/assets/87145566/1a237e29-7cb0-4c3c-b016-68291a3a6628" />
 </div>
 
 ## App
