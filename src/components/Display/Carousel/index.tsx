@@ -12,7 +12,7 @@ import * as C from './styles';
 const CarouselDisplay = () => {
   const { title } = useContext(ThemeContext);
 
-  const { reposFiltered } = useContext(GithubContext);
+  const { reposFiltered, userInformation: { infos } } = useContext(GithubContext);
 
   return (
     <Carousel
@@ -27,7 +27,11 @@ const CarouselDisplay = () => {
 
             <C.DivTitle>
 
-              <C.Title>{repo.name}</C.Title>
+              <C.Title
+                onClick={() => window.open(`https://github.com/${infos.login}/${repo.name}`)}
+              >
+                {repo.name}
+              </C.Title>
 
               <C.Visibility>{repo.visibility}</C.Visibility>
 
@@ -65,7 +69,12 @@ const CarouselDisplay = () => {
 
                       {          
                         repo.topics?.map((topic) => (
-                          <C.Topics key={repo.id}>{topic}</C.Topics>
+                          <C.Topics
+                            key={repo.id}
+                            onClick={() => window.open(`https://github.com/topics/${topic}`)}
+                          >
+                            {topic}
+                          </C.Topics>
                         ))
                       }
 
@@ -95,7 +104,11 @@ const CarouselDisplay = () => {
 
                       <C.Image src={`./repo-forked-16-${title}.svg`} />
 
-                      <C.Span>{repo.forks}</C.Span>
+                      <C.Span
+                        onClick={() => window.open(`https://github.com/microsoft/${repo.name}/fork`)}
+                      >
+                        {repo.forks}
+                      </C.Span>
 
                     </C.DetailFork>
                   : ''

@@ -17,7 +17,7 @@ export const DivTitle = styled(Div)`
   padding-bottom: 25px;
 `;
 
-export const Title = styled.span`
+export const Title = styled.a`
   font-size: 18px;
   font-weight: 600;
   color: ${(props) => props.theme.colors.link};
@@ -67,7 +67,7 @@ export const DivTopics = styled(Div)`
   flex-wrap: wrap;
 `;
 
-export const Topics = styled.div`
+export const Topics = styled.a`
   font-size: 12px;
   margin: 2px;
   padding: 4px 8px;
@@ -100,9 +100,8 @@ export const DetailFork = styled(Detail)`
   }
 `;
 
-export const DetailStar = styled(DetailFork)`
-  cursor: pointer;
-  &:hover {
-    color: ${(props) => props.theme.colors.link};
-  }
+export const DetailStar = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
 `;

@@ -18,7 +18,11 @@ const LeftSide = () => {
 
       <C.Login>{infos.login}</C.Login>
 
-      <C.BtnFollow>Follow</C.BtnFollow>
+      <C.BtnFollow
+        onClick={() => window.open(`https://github.com/${infos.login}`)}
+      >
+        Ver perfil completo
+      </C.BtnFollow>
 
       <C.Bio>{infos.bio}</C.Bio>
 
@@ -26,13 +30,17 @@ const LeftSide = () => {
 
         <C.Image src={`./users-bold-${title}.svg`} />
 
-        <C.Links>
+        <C.Links
+          onClick={() => window.open(`https://github.com/${infos.login}?tab=followers`)}
+        >
           <C.Numbers>{infos.followers}</C.Numbers>followers
         </C.Links>
 
         <C.Dot>&#8226;</C.Dot>
 
-        <C.Links>
+        <C.Links
+          onClick={() => window.open(`https://github.com/${infos.login}?tab=following`)}
+        >
           <C.Numbers>{infos.following}</C.Numbers>following
         </C.Links>
 
@@ -68,7 +76,11 @@ const LeftSide = () => {
 
               <C.Image src={`./link-${title}.svg`} />
 
-              <C.Blog>{infos.blog}</C.Blog>
+              <C.Blog
+                onClick={() => window.open(infos.blog)}
+              >
+                {infos.blog}
+              </C.Blog>
 
             </C.Div2>
         }
@@ -79,7 +91,11 @@ const LeftSide = () => {
 
               <C.Image src={`./twitter-fill-${title}.svg`} />
 
-              <C.Twitter>{infos.twitter_username}</C.Twitter>
+              <C.Twitter
+               onClick={() => window.open(`https://twitter.com/${infos.twitter_username}`)}
+              >
+                {infos.twitter_username}
+              </C.Twitter>
 
             </C.Div2>
         }

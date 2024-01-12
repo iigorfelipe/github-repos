@@ -35,7 +35,7 @@ export const IconRepositories = styled.img`
   padding-right: 6px;
 `;
 
-export const Title = styled.span`
+export const Title = styled.a`
   font-size: 14px;
   font-weight: 600;
   color: ${(props) => props.theme.colors.link};
@@ -88,11 +88,10 @@ export const DetailFork = styled(Detail)`
   }
 `;
 
-export const DetailStar = styled(DetailFork)`
-  cursor: pointer;
-  &:hover {
-    color: ${(props) => props.theme.colors.link};
-  }
+export const DetailStar = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
 `;
 
 export const Language = styled.span`

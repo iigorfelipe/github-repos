@@ -10,7 +10,7 @@ import * as C from './styles';
 const List = () => {
   const { title } = useContext(ThemeContext);
 
-  const { reposFiltered } = useContext(GithubContext);
+  const { reposFiltered, userInformation: { infos } } = useContext(GithubContext);
 
   return (
     <C.Ol>
@@ -22,7 +22,11 @@ const List = () => {
 
               <C.Div2>
 
-                <C.Title>{repo.name}</C.Title>
+                <C.Title
+                  onClick={() => window.open(`https://github.com/${infos.login}/${repo.name}`)}
+                >
+                  {repo.name}
+                </C.Title>
 
                 <C.Visibility>{repo.visibility}</C.Visibility>
 
@@ -47,7 +51,12 @@ const List = () => {
 
                         {          
                           repo.topics?.map((topic) => (
-                            <C.Topics key={topic}>{topic}</C.Topics>
+                            <C.Topics
+                              key={topic}
+                              onClick={() => window.open(`https://github.com/topics/${topic}`)}
+                            >
+                              {topic}
+                            </C.Topics>
                           ))
                         }
 
@@ -81,8 +90,10 @@ const List = () => {
                   }
 
                   {
-                    repo.forks >= 1 &&
-                      <C.DetailFork>
+                    repo.forks && repo.forks >= 1 &&
+                      <C.DetailFork
+                        onClick={() => window.open(`https://github.com/microsoft/${repo.name}/fork`)}
+                      >
 
                         <C.Image src={`./repo-forked-16-${title}.svg`} />
 

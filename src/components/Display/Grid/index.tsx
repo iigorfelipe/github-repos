@@ -9,7 +9,7 @@ import * as C from './styles';
 const Grid = () => {
   const { title } = useContext(ThemeContext);
 
-  const { reposFiltered } = useContext(GithubContext);
+  const { reposFiltered, userInformation: { infos } } = useContext(GithubContext);
 
   return (
     <C.Ol>
@@ -23,7 +23,11 @@ const Grid = () => {
 
                 <C.IconRepositories src={`./repositories-${title}.svg`} />
 
-                <C.Title>{repo.name}</C.Title>
+                <C.Title
+                  onClick={() => window.open(`https://github.com/${infos.login}/${repo.name}`)}
+                >
+                  {repo.name}
+                </C.Title>
 
                 <C.Visibility>{repo.visibility}</C.Visibility>
 
@@ -73,7 +77,11 @@ const Grid = () => {
 
                           <C.Image src={`./repo-forked-16-${title}.svg`} />
 
-                          <C.Span>{repo.forks}</C.Span>
+                          <C.Span
+                            onClick={() => window.open(`https://github.com/microsoft/${repo.name}/fork`)}
+                          >
+                            {repo.forks}
+                          </C.Span>
 
                         </C.DetailFork>
                       : ''

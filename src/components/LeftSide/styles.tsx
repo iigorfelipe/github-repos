@@ -129,7 +129,7 @@ export const Blog = styled.a`
 
 export const Twitter = styled(Blog)``;
 
-export const Email = styled(Blog)``;
+export const Email = styled(Location)``;
 
 export const Line = styled.div`
   border-bottom: 1px solid ${(props) => props.theme.colors.tertiary};

@@ -24,19 +24,17 @@ const GithubProvider = ({ children }: Props) => {
 
   const [reposFiltered, setReposFiltered] = useState<Repo[]>([]);
 
-  const memorizedValues = useMemo(() => {
-    return {
-      searchInputValue,
-      setSearchInputValue,
-      userInformation,
-      setUserInformation,
-      reposFiltered,
-      setReposFiltered,
-    };
-  }, [searchInputValue, userInformation, reposFiltered]);
+  const values = {
+    searchInputValue,
+    setSearchInputValue,
+    userInformation,
+    setUserInformation,
+    reposFiltered,
+    setReposFiltered,
+  };
 
   return (
-    <GithubContext.Provider value={memorizedValues}>
+    <GithubContext.Provider value={values}>
       {children}
     </GithubContext.Provider>
   );
