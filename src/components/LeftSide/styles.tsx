@@ -6,6 +6,7 @@ export const LeftSide = styled.div`
   width: 296px;
   font-size: 14px;
   padding: 25px 0px;
+  margin-right: 30px;
 `;
 
 export const Avatar = styled.img`
