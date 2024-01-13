@@ -29,6 +29,7 @@
 - TypeScript
 - React - `Vite (react-ts)`
 - Styled Components
+- Material UI
 
 ## Development Tools
 
@@ -57,13 +58,18 @@ npm run dev
 ## Images
 
 <div align="center">
-Dark mode
-  <img src="https://github.com/iigorfelipe/github-repos/assets/87145566/92ea8580-df19-40a9-8cef-4f39f16da6a9" />
+  Dark mode
+  <img src="https://github.com/iigorfelipe/github-repos/assets/87145566/4864e814-41d3-46cb-a2b0-7e300fb5f4a4" />
+  <p></p>
   Light mode
-  <img src="https://github.com/iigorfelipe/github-repos/assets/87145566/1a237e29-7cb0-4c3c-b016-68291a3a6628" />
+  <img src="https://github.com/iigorfelipe/github-repos/assets/87145566/952b9ff3-c018-4b4b-a9d1-0569c49a992b" />
 </div>
 
-## App
+## Project Status
+
+⚠️ **Under Development**
+
+This project is still in progress, and some functionalities are being developed. Feel free to explore what is already available and stay tuned for updates.
 
 - [Click here to see the application running](https://app-github-repos.netlify.app)
 
