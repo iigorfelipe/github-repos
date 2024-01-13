@@ -40,11 +40,8 @@ export const BtnFollow = styled.button`
   background: ${(props) => props.theme.background.tertiary};
   color: ${(props) => props.theme.colors.primary};
   &:hover {
-    background: ${(props) =>
-      props.theme.title === 'dark' ? props.theme.colors.tertiary : ''};
-    border: 1px solid
-      ${(props) =>
-        props.theme.title === 'dark' ? props.theme.colors.secundary : 'none'};
+    background: ${(props) => props.theme.colors.tertiary};
+    border: 1px solid ${(props) => props.theme.colors.secundary};
   }
 `;
 

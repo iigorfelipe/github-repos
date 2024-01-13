@@ -1,7 +1,8 @@
 import { useContext, useEffect, useState } from 'react';
 import { ThemeContext } from 'styled-components';
 import GithubContext from '../../providers/GithubContext';
-
+import { initialLanguages, initialOrders, initialTypes } from '../../helpers/initialValues';
+import BasicPopover from '../Popover';
 import * as C from './styles';
 
 const Filters = () => {
@@ -9,9 +10,27 @@ const Filters = () => {
     userInformation: { repos, stars },
     setReposFiltered,
   } = useContext(GithubContext);
-  const [searchRepo, setSearchRepo] = useState('');
 
   const { title } = useContext(ThemeContext);
+
+  const [searchRepo, setSearchRepo] = useState('');
+  const [types, setTypes] = useState(initialTypes);
+  const [languages, setLanguages] = useState(initialLanguages);
+  const [orders, setOrders] = useState(initialOrders);
+  
+  useEffect(() => {
+    
+    const uniqueLanguages = new Set(initialLanguages.map(({ option }) => option));
+  
+    repos.forEach(({ language }) => language && uniqueLanguages.add(language));
+
+    const result = Array.from(
+      uniqueLanguages, option => ({ option, check: option === 'Todos os idiomas' })
+    );
+
+    setLanguages(result);
+  }, [repos]);
+
 
   useEffect(() => {
     const filtered = repos.filter((repo) => repo.name?.startsWith(searchRepo));
@@ -51,17 +70,26 @@ const Filters = () => {
         onChange={({ target: { value } }) => setSearchRepo(value)}
       />
 
-      <C.Select>
-        <C.Option>Tipo</C.Option>
-      </C.Select>
+      <BasicPopover
+        title='Tipo'
+        label='Selecionar tipo'
+        options={types}
+        setOptions={setTypes}
+      />
 
-      <C.Select>
-        <C.Option>Linguagem</C.Option>
-      </C.Select>
+      <BasicPopover
+        title='Linguagem'
+        label='Selecionar idioma'
+        options={languages}
+        setOptions={setLanguages}
+      />
 
-      <C.Select>
-        <C.Option>Ordem</C.Option>
-      </C.Select>
+      <BasicPopover
+        title='Ordem'
+        label='Selecionar ordem'
+        options={orders}
+        setOptions={setOrders}
+      />
 
     </C.Container>
   );
