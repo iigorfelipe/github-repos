@@ -22,6 +22,9 @@ const initialValue = {
 
   reposFiltered: [],
   setReposFiltered: () => {},
+
+  valuesToBeFiltered: {repo: '', type: '', language: '', order: ''},
+  setValuesToBeFiltered: () => {},
 };
 
 const GithubContext = createContext<UserContextType>(initialValue);

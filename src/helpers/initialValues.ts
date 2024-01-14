@@ -7,14 +7,14 @@ export const initialTypes = [
     option: 'Público',
     check: false
   },
-  {
+  /*{
     option: 'Privado',
     check: false
   },
   {
     option: 'Fontes',
     check: false
-  },
+  },*/
   {
     option: 'Bifurcações',
     check: false
@@ -23,10 +23,10 @@ export const initialTypes = [
     option: 'Arquivado',
     check: false
   },
-  {
+  /*{
     option: 'Espelhos',
     check: false
-  },
+  },*/
   {
     option: 'Modelos',
     check: false
@@ -46,7 +46,7 @@ export const initialOrders = [
     check: true
   },
   {
-    option: 'Nome da empresa',
+    option: 'Nome',
     check: false
   },
   {

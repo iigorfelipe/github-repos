@@ -8,7 +8,8 @@ import * as C from './styles';
 const Filters = () => {
   const {
     userInformation: { repos, stars },
-    setReposFiltered,
+    valuesToBeFiltered,
+    setValuesToBeFiltered
   } = useContext(GithubContext);
 
   const { title } = useContext(ThemeContext);
@@ -17,7 +18,7 @@ const Filters = () => {
   const [types, setTypes] = useState(initialTypes);
   const [languages, setLanguages] = useState(initialLanguages);
   const [orders, setOrders] = useState(initialOrders);
-  
+
   useEffect(() => {
     
     const uniqueLanguages = new Set(initialLanguages.map(({ option }) => option));
@@ -33,10 +34,11 @@ const Filters = () => {
 
 
   useEffect(() => {
-    const filtered = repos.filter((repo) => repo.name?.startsWith(searchRepo));
-
-    setReposFiltered(filtered);
-  }, [repos, searchRepo, setReposFiltered]);
+    setValuesToBeFiltered({
+      ...valuesToBeFiltered,
+      repo: searchRepo
+    });
+  }, [searchRepo]);
 
   return (
     <C.Container>

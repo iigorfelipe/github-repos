@@ -1,7 +1,8 @@
-import { Dispatch, MouseEvent, SetStateAction, useState } from 'react';
+import { Dispatch, MouseEvent, SetStateAction, useContext, useState } from 'react';
 import Popover from '@mui/material/Popover';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { Check } from '@mui/icons-material';
+import GithubContext from '../../providers/GithubContext';
 import * as C from './styles';
 
 type Option = {
@@ -10,13 +11,18 @@ type Option = {
 };
 
 type PropsPopover = {
-  title: string;
+  title: 'Tipo' | 'Linguagem' | 'Ordem';
   label: string;
   options: Option[];
   setOptions: Dispatch<SetStateAction<{ option: string; check: boolean; }[]>>;
 };
 
 const BasicPopover= ({  title, label, options, setOptions }: PropsPopover) => {
+  const {
+    valuesToBeFiltered,
+    setValuesToBeFiltered
+  } = useContext(GithubContext);
+
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
 
   const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
@@ -25,6 +31,22 @@ const BasicPopover= ({  title, label, options, setOptions }: PropsPopover) => {
 
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const filter = (option: string) => {
+
+    const translationMap: Record<string, string> = {
+      'Tipo': 'type',
+      'Linguagem': 'language',
+      'Ordem': 'order',
+    };
+  
+    const key = translationMap[title].toLowerCase();
+  
+    setValuesToBeFiltered({
+      ...valuesToBeFiltered,
+      [key]: option,
+    });
   };
 
   const handleOptionClick = (option: string) => {
@@ -37,7 +59,8 @@ const BasicPopover= ({  title, label, options, setOptions }: PropsPopover) => {
       };
     });
 
-    setOptions(options)
+    setOptions(options);
+    filter(option);
     handleClose();
   };
 
